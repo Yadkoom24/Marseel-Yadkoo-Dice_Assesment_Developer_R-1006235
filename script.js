@@ -1,5 +1,5 @@
 // <!-- Note this template is take form https://www.w3schools.com and I modify it for my purposes for this assesment -->
-
+// when I had errors I used copilot for assistnace due to time.
 function rolldice_list(numdice_list) {
   const dice_list = [];
   for (let i = 0; i < numdice_list; i++) {
@@ -8,7 +8,7 @@ function rolldice_list(numdice_list) {
   return dice_list;
 }
 
-function processRoll(dice_list) {
+function calcuNumRoll(dice_list) {
   dice_list.sort((a, b) => a - b);
   if (dice_list.includes(3)) {
     while (dice_list.includes(3)) {
@@ -16,16 +16,16 @@ function processRoll(dice_list) {
     }
     return 0;
   }
-  const lowestdice_list = dice_list.shift();
-  return lowestdice_list;
+  const getLowNumDice = dice_list.shift();
+  return getLowNumDice;
 }
 
-function simulateGame(numdice_list) {
+function ProcessGame(numdice_list) {
   let dice_list = rolldice_list(numdice_list);
   let totalScore = 0;
 
   while (dice_list.length > 0) {
-    const rollScore = processRoll(dice_list);
+    const rollScore = calcuNumRoll(dice_list);
     totalScore += rollScore;
 
     if (dice_list.length > 0) {
@@ -49,7 +49,7 @@ function runSimulation() {
   const startTime = performance.now();
 
   for (let i = 0; i < numSimulations; i++) {
-    const totalScore = simulateGame(numdice_list);
+    const totalScore = ProcessGame(numdice_list);
     if (totalScore < results.length) {
       results[totalScore]++;
     }
@@ -60,7 +60,7 @@ function runSimulation() {
 
   const resultDiv = document.getElementById("results");
 
-  resultDiv.innerHTML = `<h2>Results for ${numSimulations} simulations using ${numdice_list} dice_list:</h2>`;
+  resultDiv.innerHTML = `<h2>Results for ${numSimulations} simulations using ${numdice_list} dices :</h2>`;
 
   results.forEach((count, score) => {
     const proportion = count / numSimulations;
