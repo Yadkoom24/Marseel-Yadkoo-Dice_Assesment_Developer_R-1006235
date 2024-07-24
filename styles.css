@@ -1,0 +1,72 @@
+/* Note this template is take form https://www.w3schools.com and I modify it for my purposes for this assesment */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #003e6b, #003e6b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+}
+
+#results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#time {
+  margin-top: 10px;
+  font-size: 0.9em;
+}

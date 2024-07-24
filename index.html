@@ -1,0 +1,32 @@
+<!-- Note this template is take form https://www.w3schools.com and I modify it for my purposes for this assesment -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dice Simulation</h1>
+      <h2>By Marseel Yadkoo</h2>
+      <h2>For Developer Position</h2>
+
+      <div class="form-group">
+        <label for="num-simulations">Number of Simulations:</label>
+        <input type="number" id="num-simulations" value="1000" />
+      </div>
+      <div class="form-group">
+        <label for="num-dice_list">Number of Dice:</label>
+        <input type="number" id="num-dice_list" value="5" />
+      </div>
+      <button class="btn" onclick="runSimulation()">Run Simulation</button>
+      <div id="results"></div>
+      <div id="time"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
